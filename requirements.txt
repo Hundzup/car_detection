@@ -1,0 +1,10 @@
+numpy
+ultralytics
+opencv-python
+torch
+fastapi
+python-multipart
+torchvision 
+torchaudio 
+ultralytics 
+uvicorn

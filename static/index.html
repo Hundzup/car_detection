@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Транспортный монитор</title>
+    <script>
+        async function updateStatus() {
+            const response = await fetch('/status');
+            const data = await response.json();
+            document.getElementById('status').innerText = 'Статус: ' + data.status;
+        }
+
+        // Обновление статуса каждую секунду
+        setInterval(updateStatus, 1000);
+    </script>
+</head>
+<body>
+    <h1>Видеонаблюдение</h1>
+    <img id="video" src="/video_feed" width="800">
+    <h2 id="status">Статус: ...</h2>
+</body>
+</html>
